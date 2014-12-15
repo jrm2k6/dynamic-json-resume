@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jeremy Dagorn <jeremy.dagorn@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jrm2k6/dynamic-json-resume/issues",
     "email": "jeremy.dagorn@gmail.com"
