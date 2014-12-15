@@ -14,9 +14,9 @@ program
   .version('0.0.1')
 
 program
-  .command('export <path_json> [pdf_location]')
-  .description('Export a pdf resume from the json resume provided to the given location.')
-  .action(function(path_json, pdf_location) {
+  .command('export <path_json> [pdf_location] [css_file_location]')
+  .description('Export a pdf resume from the json resume provided to the given location, applying the css file given')
+  .action(function(path_json, pdf_location, css_file_location) {
   		fs.readFile(__dirname + "/templates/" + "resume.tpl", 'utf-8', function (err, data) {
 			if (err) {
 				console.log(err);
@@ -29,7 +29,8 @@ program
 			    	var extraContent = extraManager.generateExtraItemsTemplateCode(em);
 
 				    if (templateContent && v) {
-				    	fs.readFile(__dirname + "/static/css/base.css", 'utf-8', function(err, data) {
+				    	var _cssFile = '/' + css_file_location || "/static/css/base.css";
+				    	fs.readFile(__dirname + _cssFile, 'utf-8', function(err, data) {
 				    		if (err) {
 				    			console.log(err);
 				    		}
