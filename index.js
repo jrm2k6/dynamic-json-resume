@@ -1,7 +1,7 @@
 var verifier = require('./lib/verifier');
 var extraManager = require('./lib/extraItemsManager');
 
-function getResumeWithExtras() {
+function getResumeWithExtras(resumeJsonFile) {
 	var resumeJson = JSON.parse(resumeJsonFile);
 	var v = verifier.run(resumeJson);
 	var em = extraManager.extractExtras(resumeJson);
