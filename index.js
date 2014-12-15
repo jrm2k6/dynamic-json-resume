@@ -8,12 +8,25 @@ function getResumeWithExtras(resumeJsonFile) {
 	var extraContent = extraManager.generateExtraItemsTemplateCode(em);
 
 	if (v) {
-		return {'resumeJson': resumeJson, 'extraContent': extraContent};
+		return {'resume': resumeJson.resume, 'extraContent': extraContent};
 	} else {
 		return undefined;
 	}
 }
 
+function getTemplatePath(templateName) {
+	switch (templateName) {
+		case "cv":
+			var res = __dirname + "/templates/cv.html";
+			console.log(res);
+			return res;
+			break;
+		default:
+			console.log("This template doesn't exist in the module: " + templateName);
+	}
+}
+
 module.exports = {
-	getResumeWithExtras : getResumeWithExtras
+	getResumeWithExtras : getResumeWithExtras,
+	getTemplatePath : getTemplatePath
 };
