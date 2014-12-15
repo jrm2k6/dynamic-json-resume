@@ -1,0 +1,9 @@
+#pointer {
+	width: 20px;
+	height: 20px;
+	background-color: #AC7641;
+	position: fixed;
+	top: 150px;
+	left: -10px;
+	transform: rotate(45deg);
+}

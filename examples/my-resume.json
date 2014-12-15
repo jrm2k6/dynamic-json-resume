@@ -1,0 +1,230 @@
+{
+	"resume": {
+		"contact" : {
+			"first_name": "Jeremy",
+			"last_name": "DAGORN",
+			"website": "http://www.jeremydagorn.com",
+			"email": "jeremy.dagorn@gmail.com",
+			"github": "http://github.com/jrm2k6",
+			"city": "San Diego"
+		},
+
+		"education": [
+			{
+				"item-education": {
+					"start-date": "Sep, 2011",
+					"end-date": "May, 2012",
+					"institution": {
+						"name": "Laval University",
+						"city": "Quebec City",
+						"country": "Canada"
+					},
+					"description": "Exchange student in software engineering and computer science",
+					"additional-info": "Graduating with the equivalent of a Master Degree in Computer Science",
+					"id": "item-education-laval",
+					"extra": {
+						"type": "text",
+						"extraContent": "This is when I started to discover an interest for programming. On my free time I started to work on my first website, using Ruby on Rails. You can still find it at <a href=\"http://www.old.jeremydagorn.com\"> old.jeremydagorn.com</a>."
+					}
+				}
+			},
+			{	
+				"item-education": {
+					"start-date": "Sep, 2009",
+					"end-date": "Oct, 2012",
+					"institution": {
+						"name": "Engineering School of University of Nantes",
+						"city": "Nantes",
+						"country": "France"
+					},
+					"description": "Student in Software Engineering and Networks.",
+					"additional-info": "Graduated with the equivalent of a Master Degree in Computer Science",
+					"extra": {
+						"type": "text",
+						"extraContent": "Fun fact: my first Android app was a shopping list application for a school project. <br /> Done in collaboration with <a href=\"https://twitter.com/atomrc\">@atomrc</a> at the time."
+					},
+					"id": "item-education-polytech"
+				}
+			},
+			{	
+				"item-education": {
+					"start-date": "Sep, 2006",
+					"end-date": "May, 2009",
+					"institution": {
+						"name": "University of South Brittany",
+						"city": "Vannes",
+						"country": "France"
+					},
+					"description": "Student in Computer Science.",
+					"additional-info": "Graduated with a Bachelor Degree in Computer Science with honors"
+				}
+			}
+		],
+		"work": [
+			{
+				"item-work": {
+					"start-date": "May. 2012",
+					"end-date": "Sep. 2014",
+					"position": "Software engineer",
+					"company": {
+						"name": "Prezi.com",
+						"city": "Budapest",
+						"country": "Hungary"
+					},
+					"achievements": "During my two years at Prezi, I have been part of several teams. I started as a developer in charge of implementing new features for the Prezi editor, in order to increase the number of reccurring users. Then, I joined the Collaboration team where I implemented complex user interfaces and new features for real time editing and presenting of Prezi presentations. I also joined the Javascript team where I worked on implementing a UI framework for other developers including a lot of architectural decisions.",
+					"technologies": [
+						"Actionscript",
+						"Javascript",
+						"Typescript",
+						"Haxe",
+						"React.js",
+						"Java",
+						"Python"
+					],
+					"id": "item-work-prezi",
+					"extra": {
+						"type": "text",
+						"extraContent": "I learned so much during my time there. From testing to continuous deployment. <br /> Some technologies and tools that I used: <ul><li>Jenkins</li><li>Pig/Hadoop</li><li>Cucumber</li><li>Gradle</li></ul>"
+					}
+				}
+			},
+			{
+				"item-work": {
+					"start-date": "May, 2011",
+					"end-date": "Sep, 2011",
+					"position": "Intern Android Developer",
+					"company": {
+						"name": "UC Santa Cruz",
+						"city": "Santa Cruz",
+						"country": "USA"
+					},
+					"achievements": "I was in charge of implementing two prototypes in Android for two different projects. The first project was targeting people suffering from Aphasia. The Android application created was displaying images, with multiple choices for their meaning, or recording sentences repeated by the user. A web interface has also been implemented to provide an easy way for a therapist to follow the evolution of a patient. The second project was an electronic calendar for tables for people with Alzeihmer. This was an easy way to study their habits by recording their interaction with the application (handwriting, and taking pictures). I also took part in the redaction of papers submitted for conferences.",
+					"technologies": [
+						"Android/Java",
+						"PHP"
+					],
+					"id": "item-work-ucsc",
+					"extra": {
+						"type": "text",
+						"extraContent": "You can find the submitted paper here and the implementation for the Electronic Calendar in the <a href=\"http://github.com/jrm2k6/ElectronicCalendar\">Github repo</a>."
+					}
+				}
+			},
+			{
+				"item-work": {
+					"start-date": "Jun, 2010",
+					"end-date": "Sep, 2010",
+					"position": "Intern Developer",
+					"company": {
+						"name": "Jurisoft",
+						"city": "Nantes",
+						"country": "France"
+					},
+					"achievements": "Using Delphi, I implemented a system to automatically update the desktop version of the main software of the company, as a SOAP web service. The second part of my internship was to redesign and add features to the Downloads page of the company website.",
+					"technologies": [
+						"Delphi",
+						"PHP",
+						"Javascript"
+					]
+				}
+			}
+		],
+		"projects": [
+			{
+				"item-projects": {
+					"title": "Developer at JumyApps",
+					"description":"We mainly design and develop applications on our free time. So far, we have several board games, and a Twitter client focusing on ergonomy, making your usage of Twitter easier by providing nice to use features. Entirely conceived by us, we are also in charge of promoting them through various channels.",
+					"technologies": [
+						"Android/Java"
+					],
+					"id": "id-jumyapps",
+					"extra": {
+						"type": "images",
+						"extraContent": ["http://i.imgur.com/zbYcTsL.png", "http://i.imgur.com/1zi7bKi.png", "http://i.imgur.com/LNi89NW.png", "http://i.imgur.com/P4UGX5a.png"]
+					} 
+				}
+			},
+			{
+				"item-projects": {
+					"title": "Creation of a blog engine",
+					"description":"I implemented my blog engine and personal website and decided mid-way that it would be nice to extract a smal CMS for developers. It provides an admin interface and different ways of backing your data like Dropbox or Google Drive, uses Markdown posts and it is aiming to make your life easier if you decide to have a personal blog. It is still in development but soon to be released.",
+					"technologies": [
+						"Flask/Python",
+						"Javascript",
+						"Various APIs"
+					],
+					"id": "id-blog",
+					"extra": {
+						"type": "images",
+						"extraContent": ["http://i.imgur.com/zOB5aum.png", "http://i.imgur.com/CCs4UlO.png"]
+					} 
+				}
+			},
+			{	
+				"item-projects": {
+					"title": "Android code generator",
+					"description":"This is a project still in really early development. I plan to create a small DSL to make it easy to generate Android code for your implementation. This project is born through my passion for Android development and my growing interest for functional programing and Haskell specifically.",
+					"technologies": [
+						"Haskell"
+					]
+				}
+			}
+		],
+		"skills": [
+			"Actionscript",
+			"Javascript",
+			"Haxe",
+			"Android/Java",
+			"Python/Flask/Django",
+			"Typescript"
+		],
+		"languages": [
+			{
+				"item-languages": {
+					"name": "French",
+					"additional-info": "Native language"
+				}
+			},
+			{
+				"item-languages": {
+					"name": "English",
+					"additional-info": "Bilingual"
+				}
+			}
+		],
+		"hobbies": [
+			{
+				"item-hobbies": {
+					"name": "Criminology",
+					"id": "hobby-criminology",
+					"extra": {
+						"type": "text",
+						"extraContent": "One of my favorite author is <a href=\"www.goodreads.com/author/show/118380.St_phane_Bourgoin\">Stephane Bourgoin</a>."
+					}
+				}
+			},
+			{
+				"item-hobbies": {
+					"name": "Soccer",
+					"additional-info": "played competitively for more than 18 years"
+				}
+			},
+			{
+				"item-hobbies": {
+					"name": "Startups",
+					"id": "hobby-startup",
+					"extra": {
+						"type": "text",
+						"extraContent": "My daily readings include: <ul><li>Hacker News</li><li>Various programming related subreddits</li><li>Netflix tech blog</li><li>Linkedin tech blog</li> </lu>and a lot of nice blog posts to read found through <a href=\"http://www.twitter.com/jrm2k6\">Twitter</a>"
+					}
+				}
+			},
+			{
+				"item-hobbies": {
+					"name": "Travelling"
+				}
+			}
+		]
+
+	}
+}

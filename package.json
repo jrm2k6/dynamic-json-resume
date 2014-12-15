@@ -1,0 +1,22 @@
+{
+  "name": "json-resume-dynamic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "commander": "^2.5.0",
+    "express": "^4.10.4",
+    "html-pdf": "^0.3.0",
+    "jquery": "^2.1.1",
+    "jsreport": "^0.2.3",
+    "mustache": "^0.8.2",
+    "mustache-express": "^1.2.0",
+    "phantomjs": "^1.9.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

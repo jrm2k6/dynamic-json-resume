@@ -1,0 +1,174 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+body {
+	font-family: "URW Palladio L", serif;
+	font-size: 16px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: 400; 
+	line-height: 20px;
+}
+
+.container {
+	display: flex;
+}
+
+ul {
+	list-style: square inside;
+}
+
+#cv {
+	background-color: #FAF7AF;
+	padding-left: 10px;        
+  	flex: 3;
+}
+
+
+#extra {
+	background-color: black;
+	color: white;         
+  	flex: 1;
+  	font-size: 1.2em;
+  	padding: 10px;
+}
+
+div[id$='extra'] > a:link, div[id$='extra'] > ul > a:link{
+	color: yellow;
+	text-decoration: : none;
+}
+
+div[id$='extra'] > a:visited, div[id$='extra'] > ul > a:link{
+	color: yellow;
+	text-decoration: : none;
+}
+
+div[id$='extra'] > img {
+	width: 25%;
+	height: 25%;
+}
+
+#contact {
+	padding: 8px 4px;
+	border: 2px solid black;
+	border-radius: 5px;
+	text-align: center;
+	margin: 0 auto;
+	width: 300px;
+	background-color: #E7DC92;
+}
+
+.contact-name {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.section {
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+
+.title-section {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.2em;
+	padding-bottom: 15px;
+}
+
+.header-date {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.header-company-name, .header-school-name {
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+.header-school-location, .header-company-location {
+	color: #545F69;
+}
+
+.section > div {
+	padding-left: 50px;
+}
+
+.education-item, .work-item, .project-item {
+	padding-bottom: 15px;
+}
+
+.description-work {
+	width: 90%;
+	padding-bottom: 10px;
+}
+
+.technologies-work > span {
+	padding : 0px 10px;
+	margin-left: 5px;
+	border-radius: 6px;
+	border: 1px solid black;
+	background-color: #AC7641;
+	color: white;
+	font-weight: bold;
+}
+
+.skills-items > span {
+	padding : 0px 10px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	border-radius: 6px;
+	border: 1px solid black;
+	background-color: #B2913F;
+	color: white;
+	font-weight: bold;
+	font-size: 1.1em;
+	flex: 0 0 auto;
+}
+
+.skills-items {
+	padding-left: 50px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+    .container {
+        display: block;
+    }
+}
+
+@media print {
+	body {
+		margin: 0 0;
+	}
+	#extra {
+		display: none;
+	}
+}

@@ -1,0 +1,165 @@
+{
+	"resume": {
+		"contact" : {
+			"first_name": "Name",
+			"last_name": "Last Name",
+			"website": "http://website.com",
+			"email": "jeremy.dagorn@poop.com",
+			"github": "http://github.com/username",
+			"city": "City"
+		},
+
+		"education": [
+			{
+				"item-education": {
+					"start-date": "Sep, 2011",
+					"end-date": "May, 2012",
+					"institution": {
+						"name": "Laval University",
+						"city": "Quebec City",
+						"country": "Canada"
+					},
+					"description": "Exchange student in software engineering and computer science",
+					"additional-info": "Graduating with the equivalent of a Master Degree in Computer Science"
+				}
+			},
+			{	
+				"item-education": {
+					"start-date": "",
+					"end-date": "",
+					"institution": {
+						"name": "",
+						"city": "",
+						"country": ""
+					},
+					"description": "",
+					"additional-info": ""
+				}
+			},
+			{	
+				"item-education": {
+					"start-date": "",
+					"end-date": "",
+					"institution": {
+						"name": "",
+						"city": "",
+						"country": ""
+					},
+					"description": "",
+					"additional-info": ""
+				}
+			}
+		],
+		"work": [
+			{
+				"item-work": {
+					"start-date": "May. 2012",
+					"end-date": "Sep. 2014",
+					"position": "Software engineer",
+					"company": {
+						"name": "Prezi.com",
+						"city": "Budapest",
+						"country": "Hungary"
+					},
+					"achievements": "During my two years at Prezi, I have been part of several teams. I started as a developer in charge of implementing new features for the Prezi editor, in order to increase the number of reccurring users. Then, I joined the Collaboration team where I implemented complex user interfaces and new features for real time editing and presenting of Prezi presentations. I also joined the Javascript team where I worked on implementing a UI framework for other developers including a lot of architectural decisions.",
+					"technologies": [
+						"tech1",
+						"tech2",
+						"tech3"
+					]
+				}
+			},
+			{
+				"item-work": {
+					"start-date": "Jun, 2010",
+					"end-date": "Sep, 2010",
+					"position": "",
+					"company": {
+						"name": "",
+						"city": "",
+						"country": ""
+					},
+					"achievements": "",
+					"technologies": [
+						"tech1",
+						"tech2",
+						"tech3"
+					]
+				}
+			}
+		],
+		"projects": [
+			{
+				"item-projects": {
+					"title": "project 1",
+					"description":"this is a p1",
+					"technologies": [
+						"tech1",
+						"tech2",
+						"tech3"
+					]
+				}
+			},
+			{
+				"item-projects": {
+					"title": "p2",
+					"description":"this is shit ",
+					"technologies": [
+						"tech1",
+						"tech2",
+						"tech3"
+					]
+				}
+			},
+			{	
+				"item-projects": {
+					"title": "ssksaooksoksa",
+					"description":"skkosokd is shit ",
+					"technologies": [
+						"tech1",
+						"tech2",
+						"tech3"
+					]
+				}
+			}
+		],
+		"skills": [
+			"skill1",
+			"skill2",
+			"skill3"
+		],
+		"languages": [
+			{
+				"item-languages": {
+					"name": "Engflis",
+					"additional-info": "bilingual"
+				}
+			},
+			{
+				"item-languages": {
+					"name": "french"
+				}
+			}
+		],
+		"hobbies": [
+			{
+				"item-hobbies": {
+					"name": "soccer"
+				}
+			},
+			{
+				"item-hobbies": {
+					"name": "criminology",
+					"additional-info": "i read book"
+				}
+			},
+			{
+				"item-hobbies": {
+					"name": "skoas",
+					"additional-info": "daji jiajs"
+				}
+			}
+		]
+
+	}
+}
