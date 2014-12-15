@@ -1,14 +1,12 @@
 {
   "name": "json-resume-dynamic",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A tool to generate a web page containing your resume",
   "main": "index.js",
   "dependencies": {
     "commander": "^2.5.1",
-    "express": "^4.10.4",
     "html-pdf": "^0.3.0",
-    "mustache": "^0.8.2",
-    "mustache-express": "^1.2.0"
+    "mustache": "^0.8.2"
   },
   "devDependencies": {},
   "scripts": {
@@ -25,7 +23,14 @@
     "url": "https://github.com/jrm2k6/dynamic-json-resume"
   },
   "bin": {
-    "module-name": "cli.js"
+    "json-resume-dyanmic-cli": "./cli.js"
   },
+  "files": [
+    "examples/",
+    "exports/",
+    "lib/",
+    "static/",
+    "templates/"
+  ],
   "keywords": ["resume", "cv", "template", "front-end", "portfolio"]
 }
