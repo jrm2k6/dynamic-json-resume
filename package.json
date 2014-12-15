@@ -1,22 +1,31 @@
 {
   "name": "json-resume-dynamic",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "A tool to generate a web page containing your resume",
+  "main": "index.js",
   "dependencies": {
-    "commander": "^2.5.0",
+    "commander": "^2.5.1",
     "express": "^4.10.4",
     "html-pdf": "^0.3.0",
-    "jquery": "^2.1.1",
-    "jsreport": "^0.2.3",
     "mustache": "^0.8.2",
-    "mustache-express": "^1.2.0",
-    "phantomjs": "^1.9.12"
+    "mustache-express": "^1.2.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Jeremy Dagorn <jeremy.dagorn@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrm2k6/dynamic-json-resume/issues",
+    "email": "jeremy.dagorn@gmail.com"
+  },
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/jrm2k6/dynamic-json-resume"
+  },
+  "bin": {
+    "module-name": "cli.js"
+  },
+  "keywords": ["resume", "cv", "template", "front-end", "portfolio"]
 }
