@@ -1,6 +1,6 @@
 {
   "name": "json-resume-dynamic",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "A tool to generate a web page containing your resume",
   "main": "index.js",
   "dependencies": {
@@ -18,7 +18,7 @@
     "url": "https://github.com/jrm2k6/dynamic-json-resume/issues",
     "email": "jeremy.dagorn@gmail.com"
   },
-  "repository" : {
+  "repository": {
     "type": "git",
     "url": "https://github.com/jrm2k6/dynamic-json-resume"
   },
@@ -33,5 +33,15 @@
     "resume-schema.json",
     "LICENSE.txt"
   ],
-  "keywords": ["resume", "cv", "template", "front-end", "portfolio", "json-resume"]
+  "keywords": [
+    "resume",
+    "cv",
+    "template",
+    "front-end",
+    "portfolio",
+    "json-resume"
+  ],
+  "bin": {
+    "json-resume-dynamic-cli": "./cli.js"
+  }
 }
