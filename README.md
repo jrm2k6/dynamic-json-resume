@@ -190,3 +190,6 @@ console.log("Listening on " + port);
 
 Mentions:
  - Marc Bachmann for the nice-to-use node-html-pdf
+
+You can find a quickly done example here: http://resume-jeremydagorn.herokuapp.com/
+You can of course modify the theme/style of your resume by playing around with those files.
