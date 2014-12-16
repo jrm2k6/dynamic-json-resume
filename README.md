@@ -7,7 +7,7 @@ This started as a small weekend project. In the end, it took me 2/3 afternoons t
 
 ##Inspiration:
 
-- [json-resume](https://jsonresume.org)/
+- [json-resume](https://jsonresume.org)
 - This [blog post](http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome), as I really liked the content loaded as you scroll on the right. I wanted to have the same, in a simple way
 for my resume.
 
