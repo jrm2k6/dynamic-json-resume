@@ -1,6 +1,6 @@
 {
   "name": "json-resume-dynamic",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A tool to generate a web page containing your resume",
   "main": "index.js",
   "dependencies": {
@@ -27,7 +27,11 @@
     "exports/",
     "lib/",
     "static/",
-    "templates/"
+    "templates/",
+    "index.js",
+    "cli.js",
+    "resume-schema.json",
+    "LICENSE.txt"
   ],
-  "keywords": ["resume", "cv", "template", "front-end", "portfolio"]
+  "keywords": ["resume", "cv", "template", "front-end", "portfolio", "json-resume"]
 }
