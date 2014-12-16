@@ -22,9 +22,6 @@
     "type": "git",
     "url": "https://github.com/jrm2k6/dynamic-json-resume"
   },
-  "bin": {
-    "json-resume-dyanmic-cli": "./cli.js"
-  },
   "files": [
     "examples/",
     "exports/",
