@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Dynamic-json-resume by jrm2k6</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Dynamic-json-resume</h1>
+        <h2>Create your resume easily using json, and add some dynamism to it, or export it as pdf.</h2>
+        <a href="https://github.com/jrm2k6/dynamic-json-resume" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="dynamic-json-resume" class="anchor" href="#dynamic-json-resume" aria-hidden="true"><span class="octicon octicon-link"></span></a>dynamic-json-resume</h1>
+
+<p>Create your resume easily using json, and add some dynamism to it, or export it as pdf.</p>
+
+<p>This started as a small weekend project. In the end, it took me 2/3 afternoons to finish it and have it published on npm.</p>
+
+<h2>
+<a id="inspiration" class="anchor" href="#inspiration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inspiration:</h2>
+
+<ul>
+<li><a href="https://jsonresume.org">json-resume</a></li>
+<li>This <a href="http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome">blog post</a>, as I really liked the content loaded as you scroll on the right. I wanted to have the same, in a simple way
+for my resume.</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation:</h2>
+
+<p><code>npm install (--save) json-resume-dynamic</code></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage:</h2>
+
+<ul>
+<li>You will have to fill out your resume following a specific json schema.</li>
+<li>This assumes that you are using express for the server part if you want to display your resume on your website.</li>
+<li>If you are not interested in showcasing your resume on your website, you can just export it as a PDF and skip directly to How to generate a PDF from my json file?</li>
+</ul>
+
+<h2>
+<a id="json-schema" class="anchor" href="#json-schema" aria-hidden="true"><span class="octicon octicon-link"></span></a>JSON Schema:</h2>
+
+<p>Your resume will be divided into 6 sections, all englobed into a <code>resume</code> JSON object.</p>
+
+<h4>
+<a id="contact-section" class="anchor" href="#contact-section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact section:</h4>
+
+<pre><code>"contact" : {
+        "first_name": "",
+        "last_name": "",
+        "website": "",
+        "email": "",
+        "github": "",
+        "city": ""
+    }
+</code></pre>
+
+<p><strong>Optional:</strong> <code>website</code> and <code>github</code></p>
+
+<h4>
+<a id="education-section" class="anchor" href="#education-section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Education section:</h4>
+
+<p>This will be composed of an array of <code>item-education</code> englobed into an <code>education</code> JSON object.</p>
+
+<p>An <code>item-education</code> has this form:</p>
+
+<pre><code>  "item-education": {
+    "start-date": "",
+    "end-date": "",
+    "institution": {
+        "name": "",
+        "city": "",
+        "country": ""
+    },
+    "description": "",
+    "additional-info": ""
+  }
+</code></pre>
+
+<p><strong>Optional: <code>additional-info</code>.</strong></p>
+
+<h4>
+<a id="work-section" class="anchor" href="#work-section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Work section:</h4>
+
+<p>This will be composed of an array of <code>item-work</code> englobed into a <code>work</code> JSON object.</p>
+
+<pre><code>"item-work": {
+    "start-date": "",
+    "end-date": "",
+    "position": "",
+    "company": {
+        "name": "",
+        "city": "",
+        "country": ""
+     },
+    "achievements": "",
+    "technologies": ["", ""]
+}
+</code></pre>
+
+<h4>
+<a id="project-section" class="anchor" href="#project-section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project section:</h4>
+
+<p>This will be composed of an array of <code>item-projects</code> englobed into a <code>projects</code> JSON object.</p>
+
+<pre><code>"item-projects": {
+    "title": "",
+    "description":"",
+    "technologies": []
+}
+</code></pre>
+
+<h4>
+<a id="skills-section" class="anchor" href="#skills-section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills section:</h4>
+
+<p>This is just an array of strings with the key "skills"</p>
+
+<pre><code> "skills" : ["skill1", "skill2"]
+</code></pre>
+
+<h4>
+<a id="languages-and-hobbies-sections" class="anchor" href="#languages-and-hobbies-sections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Languages and Hobbies sections:</h4>
+
+<p>This will be composed of an array of <code>item-languages</code> englobed into a <code>languages</code> and an array of <code>item-hobbies</code>
+into a <code>hobbies</code> JSON object respectively.</p>
+
+<pre><code>
+"item-languages": {
+    "name": "",
+    "additional-info": ""
+}
+
+{
+"item-hobbies": {
+    "name": "",
+    "additional-info": ""
+}
+
+</code></pre>
+
+<p><strong>Optional: <code>additional-info</code>.</strong></p>
+
+<h2>
+<a id="how-to-add-extra-content-for-your-resume" class="anchor" href="#how-to-add-extra-content-for-your-resume" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to add extra content for your resume?</h2>
+
+<p>This is done by adding two properties only to the items of your JSON's schema:</p>
+
+<ol>
+<li>You need to add an <code>id</code> attribute</li>
+<li>You need to add an <code>extra</code> JSON object having two properties:</li>
+</ol>
+
+<pre><code>"extra" {
+  "type": "text" || "images"
+  "extraContent": &lt;html string&gt; || &lt;string&gt; if type == "text" 
+                  [&lt;url-image&gt;] or &lt;url-image&gt; if type == "images"
+}
+</code></pre>
+
+<p>You can find an empty schema in <code>resume-schema.json</code> at the root of the module or a working schema in <code>examples/my-resume.json</code>.</p>
+
+<h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API:</h2>
+
+<p>Two methods only:</p>
+
+<p><code>getResumeWithExtras(strResumeAsJson)</code> returns an object containing the resume section as <code>result.resume</code> and the extras section as <code>result.extraContent</code> </p>
+
+<p>It will parse the JSON string provided and verify that:</p>
+
+<ul>
+<li>all the mandatory fields are declared.</li>
+<li>each extra object has an id.</li>
+</ul>
+
+<p>If something is wrong, the error message should give you a good indication on how fix your issue!</p>
+
+<p><code>getTemplatePath(nameTemplate)</code> returns the template location within the module.</p>
+
+<h2>
+<a id="how-to-generate-a-pdf-for-my-resume" class="anchor" href="#how-to-generate-a-pdf-for-my-resume" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to generate a PDF for my resume?</h2>
+
+<ol>
+<li>Go into the module folder</li>
+<li>Run <code>./cli.js export &lt;json_path&gt; [output_location] [css_file_location]</code>
+</li>
+</ol>
+
+<p>By default it will generate a resume.pdf file in the current directory.</p>
+
+<h5>
+<a id="complete-example-to-integrate-this-into-your-node-app-assuming-you-use-node-express-and-mustache-express" class="anchor" href="#complete-example-to-integrate-this-into-your-node-app-assuming-you-use-node-express-and-mustache-express" aria-hidden="true"><span class="octicon octicon-link"></span></a>Complete example to integrate this into your node app (assuming you use node-express and mustache-express):</h5>
+
+<pre><code>var express = require('express');
+var path = require('path');
+var fs = require('fs');
+var mustacheExpress = require('mustache-express');
+var dynamicJsonResume = require('json-resume-dynamic');
+var app = express()
+
+app.use(express.static(path.join(__dirname, 'static')));
+
+app.engine('html', mustacheExpress());
+app.set('view engine', 'html');
+app.set('views', __dirname + '/templates');
+
+
+app.get('/', function(request, response) {
+var resumeJsonFile = fs.readFileSync(__dirname + "/my-resume.json", 'utf-8', function (err, data) {
+});
+
+var resume = dynamicJsonResume.getResumeWithExtras(resumeJsonFile);
+if (resume) {
+response.render(dynamicJsonResume.getTemplatePath('cv'), resume);
+}
+});
+
+var port = process.env.PORT || 5000;
+
+app.listen(port, function() {
+console.log("Listening on " + port);
+}); 
+</code></pre>
+
+<h2>
+<a id="mentions" class="anchor" href="#mentions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mentions:</h2>
+
+<ul>
+<li>
+<a href="https://github.com/marcbachmann">Marc Bachmann</a> for the nice to use <a href="https://github.com/marcbachmann/node-html-pdf">node-html-pdf</a>
+</li>
+</ul>
+
+<p>You can find a quickly done example here: <a href="http://resume-jeremydagorn.herokuapp.com/">http://resume-jeremydagorn.herokuapp.com/</a>.
+You can of course modify the theme/style of your resume by playing around with <a href="https://github.com/jrm2k6/dynamic-json-resume/tree/master/static/css">those files</a>.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/jrm2k6/dynamic-json-resume/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/jrm2k6/dynamic-json-resume/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/jrm2k6/dynamic-json-resume"></a> is maintained by <a href="https://github.com/jrm2k6">jrm2k6</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
