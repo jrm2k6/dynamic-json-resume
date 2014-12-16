@@ -17,9 +17,7 @@ function getResumeWithExtras(resumeJsonFile) {
 function getTemplatePath(templateName) {
 	switch (templateName) {
 		case "cv":
-			var res = __dirname + "/templates/cv.html";
-			console.log(res);
-			return res;
+			return __dirname + "/templates/cv.html";
 			break;
 		default:
 			console.log("This template doesn't exist in the module: " + templateName);
