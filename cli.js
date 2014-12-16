@@ -5,13 +5,14 @@ var path = require('path');
 var fs = require('fs');
 var mustache = require('mustache');
 var pdf = require('html-pdf');
+var pkg = require('./package.json');
 var verifier = require('./lib/verifier');
 var extraManager = require('./lib/extraItemsManager');
 
 var program = require('commander');
 
 program
-  .version('0.0.1')
+  .version(pkg.version)
 
 program
   .command('export <path_json> [pdf_location] [css_file_location]')
@@ -20,19 +21,29 @@ program
   		fs.readFile(__dirname + "/templates/" + "resume.tpl", 'utf-8', function (err, data) {
 			if (err) {
 				console.log(err);
+				process.exit(1);
 			} else {
 				var templateContent = data;
 				fs.readFile(__dirname + '/' + path_json, 'utf-8', function (err, data) {
+					if (err) {
+						console.log(err);
+						process.exit(1);
+					}
 			    	var resumeJson = JSON.parse(data);
 			    	var v = verifier.run(resumeJson);
 			    	var em = extraManager.extractExtras(resumeJson);
 			    	var extraContent = extraManager.generateExtraItemsTemplateCode(em);
 
 				    if (templateContent && v) {
-				    	var _cssFile = '/' + css_file_location || "/static/css/base.css";
+				    	var _cssFile = "/static/css/base.css";
+				    	if (css_file_location) {
+				    		_cssFile = '/' + css_file_location;
+				    	}
+
 				    	fs.readFile(__dirname + _cssFile, 'utf-8', function(err, data) {
 				    		if (err) {
 				    			console.log(err);
+				    			process.exit(1);
 				    		}
 
 				    		var head = "<head><style>" + data + "</style></head>";
@@ -45,10 +56,16 @@ program
 							function(err, buffer) {
 								if (err) {
 									console.log(err);
+									process.exit(1);
 								} else {
 									try {
-										var _pdf_location = '/' + pdf_location || 'exports/resume.pdf';
-										var _path = process.cwd() + _pdf_location;
+
+										var finalPdfLocation = '/resume.pdf';
+
+										if (pdf_location) {
+											finalPdfLocation = '/' + pdf_location;
+										}
+										var _path = process.cwd() + finalPdfLocation;
 										fs.writeFileSync(_path, buffer);
 									} catch (err) {
     									console.log("Problem writing " + _path + " : " + err.message)
