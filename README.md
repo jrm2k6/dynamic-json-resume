@@ -5,29 +5,29 @@ Create your resume easily using json, and add some dynamism to it, or export it 
 
 This started as a small weekend project. In the end, it took me 2/3 afternoons to finish it and have it published on npm.
 
-Inspiration:
+##Inspiration:
 
-- json-resume
-- This blog post, as I really liked the content loaded as you scroll on the right. I wanted to have the same, in a simple way
+- [json-resume](https://jsonresume.org)/
+- This [blog post](http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome), as I really liked the content loaded as you scroll on the right. I wanted to have the same, in a simple way
 for my resume.
 
 
-Installation:
+##Installation:
 
-- npm install (--save) json-resume-dynamic
+``` npm install (--save) json-resume-dynamic ```
 
-Usage:
+##Usage:
+
 - You will have to fill out your resume following a specific json schema.
 - This assumes that you are using express for the server part if you want to display your resume on your website.
-- If you are not interested in showcasing your resume on your website, you can just export it as a PDF and skip directly to
-How to generate a PDF from my json file?
+- If you are not interested in showcasing your resume on your website, you can just export it as a PDF and skip directly to How to generate a PDF from my json file?
 
 
-JSON Schema:
+##JSON Schema:
 
 Your resume will be divided into 6 sections, all englobed into a ```resume``` JSON object.
 
-Contact section:
+####Contact section:
 ```
 "contact" : {
         "first_name": "",
@@ -38,9 +38,9 @@ Contact section:
         "city": ""
     }
 ```
-Optional: ```website``` and ```github```
+**Optional:** ```website``` and ```github```
 
-Education section:
+####Education section:
 This will be composed of an array of ```item-education``` englobed into an ```education``` JSON object.
 
 An ```item-education``` has this form:
@@ -59,9 +59,9 @@ An ```item-education``` has this form:
   }
 ```
 
-Optional: ```additional-info```
+**Optional: ```additional-info```.**
 
-Work section:
+#### Work section:
 This will be composed of an array of ```item-work``` englobed into a ```work``` JSON object.
 ```
 "item-work": {
@@ -78,7 +78,7 @@ This will be composed of an array of ```item-work``` englobed into a ```work``` 
 }
 ```
 
-Project section:
+#### Project section:
 This will be composed of an array of ```item-projects``` englobed into a ```projects``` JSON object.
 
 ```
@@ -88,14 +88,14 @@ This will be composed of an array of ```item-projects``` englobed into a ```proj
     "technologies": []
 }
 ```
- Skills section:
+#### Skills section:
  This is just an array of strings with the key "skills"
  
  ```
  "skills" : ["skill1", "skill2"]
 ```
 
-Languages and Hobbies sections:
+#### Languages and Hobbies sections:
 This will be composed of an array of ```item-languages``` englobed into a ```languages``` and an array of ```item-hobbies```
 into a ```hobbies``` JSON object respectively.
 
@@ -113,10 +113,10 @@ into a ```hobbies``` JSON object respectively.
 }
 
 ```
-Optional: ```additional-info```
+**Optional: ```additional-info```.**
 
 
-How to add extra content for your resume?
+##How to add extra content for your resume?
 This is done by adding two properties only to the items of your JSON's schema:
 
 1. You need to add an ```id``` attribute
@@ -132,7 +132,7 @@ This is done by adding two properties only to the items of your JSON's schema:
 
 You can find an empty schema in ```resume-schema.json``` at the root of the module or a working schema in ```examples/my-resume.json```.
 
-API:
+##API:
 
 Two methods only:
 
@@ -146,14 +146,14 @@ If something is wrong, the error message should give you a good indication on ho
 
 ```getTemplatePath(nameTemplate)``` returns the template location within the module.
 
-PDF generation:
+## How to generate a PDF for my resume?
 1. Go into the module folder
 2. Run ```./cli.js export <json_path> [output_location] [css_file_location]```
 
 By default it will generate a resume.pdf file in the current directory.
 
 
-Complete example to integrate this into your node app (assuming you use node-express and mustache-express):
+##### Complete example to integrate this into your node app (assuming you use node-express and mustache-express):
 
 ```
 var express = require('express');
@@ -188,8 +188,8 @@ console.log("Listening on " + port);
 ```
 
 
-Mentions:
- - Marc Bachmann for the nice-to-use node-html-pdf
+##Mentions:
+ - [Marc Bachmann](https://github.com/marcbachmann) for the nice to use [node-html-pdf](https://github.com/marcbachmann/node-html-pdf)
 
-You can find a quickly done example here: http://resume-jeremydagorn.herokuapp.com/
-You can of course modify the theme/style of your resume by playing around with those files.
+You can find a quickly done example here: http://resume-jeremydagorn.herokuapp.com/.
+You can of course modify the theme/style of your resume by playing around with [those files](https://github.com/jrm2k6/dynamic-json-resume/tree/master/static/css).
