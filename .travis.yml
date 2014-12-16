@@ -1,0 +1,6 @@
+deploy:
+  provider: npm
+  api_key:
+    secure: WBHKvbPmvpkui5OkUMHOni7h7wudb+YSL9mzxh9NlJJRaQ3lZNI3kjdmVfoJ4FeRV7a0H8kySR5wTJtNaVhx37j8r2W/Fyrq3GECM54hxXIzy5yaUPphUDkme2w4MXMVdfqbr+aQli3znOsLyRZt1BCOD50nSLv/PcwyKhmb1Hw=
+  on:
+    tags: true
