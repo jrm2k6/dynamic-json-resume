@@ -6,7 +6,6 @@ $(document).ready(function() {
 	var nextExtraIndex = 0;
 	var previousScrollY = _window.scrollTop();
 	var currentExtraShown = undefined;
-	var highlightedDiv = undefined;
 	var timeoutResize;
 
 	var associatedDivs = $("div").filter(function() {
@@ -29,13 +28,13 @@ $(document).ready(function() {
 
 				if (_window.scrollTop() > previousScrollY) {
 					if (divToCheck.offset().top - _window.scrollTop() < OFFSET_TOP && nextExtraIndex < Object.keys(matches).length) {
-						showElem($(matches[dataId]), currentExtraShown, divToCheck);
+						showElem($(matches[dataId]), currentExtraShown);
 						nextExtraIndex++;
 						currentExtraShown = $(matches[dataId]); 
 					}
 				} else {
 					if (_window.scrollTop() - divToCheck.offset().top < OFFSET_TOP && nextExtraIndex >= 0) {
-						showElem($(matches[dataId]), currentExtraShown, divToCheck);
+						showElem($(matches[dataId]), currentExtraShown);
 						nextExtraIndex--;
 						currentExtraShown = $(matches[dataId]);
 					}
@@ -65,7 +64,7 @@ $(document).ready(function() {
 
 	function redrawExtra(_currentExtraShown) {
 		if (_currentExtraShown) {
-			showElem(_currentExtraShown, undefined, undefined);
+			showElem(_currentExtraShown, undefined);
 		}
 	}
 
@@ -82,13 +81,9 @@ $(document).ready(function() {
 		return _m;
 	}
 
-	function showElem(elem, _currentExtraShown, _associatedDiv) {
+	function showElem(elem, _currentExtraShown) {
 		if (_currentExtraShown !== undefined) {
 			_currentExtraShown.css('display', 'none');
-		}
-
-		if (_associatedDiv !== undefined) {
-			highlightDiv(_associatedDiv);
 		}
 
 		var containsImages = extraContainsImages(elem);
@@ -106,21 +101,12 @@ $(document).ready(function() {
 		$(elem).css('top', topPosition);
 	}
 
-	function highlightDiv(_elem) {
-		if (highlightedDiv !== undefined) {
-			if (highlightedDiv !== _elem) {
-				$(_elem).addClass('highlighted');
-				$(highlightedDiv).removeClass('highlighted')
-			}
-		} else {
-			$(_elem).addClass('highlighted');
-		}
-
-		highlightedDiv = _elem;
-	}
-
 	function getPositionValue(containsImages, divAtBottom) {
-		return (containsImages && divAtBottom) ? 'static' : 'fixed';
+		if (containsImages && divAtBottom) {
+			return 'static';
+		} else {
+			return 'fixed';
+		}
 	}
 
 	function getDisplayValue(containsImages, divAtBottom) {
@@ -150,7 +136,6 @@ $(document).ready(function() {
 		}
 
 		var closestDivId = undefined;
-		var closestDiv = undefined;
 		var closestDistance = Number.POSITIVE_INFINITY;
 		var closestDivIndex = undefined;
 		var index = 0;
@@ -168,7 +153,6 @@ $(document).ready(function() {
 			if (currentDistance < closestDistance) {
 				closestDistance = currentDistance;
 				closestDivId = _id;
-				closestDiv = divToCheck;
 				closestDivIndex = index;
 			}
 
@@ -176,7 +160,7 @@ $(document).ready(function() {
 		}
 
 		var extraToShow = $(_matches[closestDivId]);
-		showElem(extraToShow, undefined, closestDiv);
+		showElem(extraToShow, undefined);
 		currentExtraShown = extraToShow;
 		nextExtraIndex = closestDivIndex;
 	}
