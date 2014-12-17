@@ -158,6 +158,11 @@ div[id$='extra'] > img {
 	flex-wrap: wrap;
 }
 
+.highlighted {
+	border-radius: 5px;
+	background-color: rgba(178, 145, 63, 0.4);
+}
+
 @media (max-width: 900px) {
     .container {
         display: block;
