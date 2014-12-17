@@ -102,11 +102,7 @@ $(document).ready(function() {
 	}
 
 	function getPositionValue(containsImages, divAtBottom) {
-		if (containsImages && divAtBottom) {
-			return 'static';
-		} else {
-			return 'fixed';
-		}
+		return (containsImages && divAtBottom) ? 'static' : 'fixed';
 	}
 
 	function getDisplayValue(containsImages, divAtBottom) {
