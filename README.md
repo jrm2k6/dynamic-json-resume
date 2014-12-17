@@ -1,5 +1,6 @@
 dynamic-json-resume
 ===================
+[![Build Status](https://travis-ci.org/jrm2k6/json-resume-dynamic.svg?branch=master)](https://travis-ci.org/jrm2k6/json-resume-dynamic)
 
 Create your resume easily using json, and add some dynamism to it, or export it as pdf.
 
