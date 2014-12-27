@@ -1,0 +1,1 @@
+- 27 December 2014 - [Add Unit tests](https://github.com/jrm2k6/dynamic-json-resume/commit/f4fe215e6ce5f3636d2f7302a3274f400d6d295d) + [release 0.0.10](https://www.npmjs.com/package/json-resume-dynamic)
