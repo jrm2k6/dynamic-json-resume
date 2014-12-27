@@ -191,7 +191,7 @@ console.log("Listening on " + port);
 
 ##Tests
 
-You can run the tests by executing: ```./node_modules/mocha/bin/mocha tests/```
+You can run the tests by executing: ```npm test```
 ##Mentions:
  - [Marc Bachmann](https://github.com/marcbachmann) for the nice to use [node-html-pdf](https://github.com/marcbachmann/node-html-pdf)
 
