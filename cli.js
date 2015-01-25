@@ -31,8 +31,6 @@ program
 					}
 			    	var resumeJson = JSON.parse(data);
 			    	var v = verifier.run(resumeJson);
-			    	var em = extraManager.extractExtras(resumeJson);
-			    	var extraContent = extraManager.generateExtraItemsTemplateCode(em);
 
 				    if (templateContent && v) {
 				    	var _cssFile = "/static/css/base.css";
@@ -98,8 +96,6 @@ program
 					}
 			    	var resumeJson = JSON.parse(data);
 			    	var v = verifier.run(resumeJson);
-			    	var em = extraManager.extractExtras(resumeJson);
-			    	var extraContent = extraManager.generateExtraItemsTemplateCode(em);
 
 				    if (templateContent && v) {
 				    	var _cssFile = "/static/css/base.css";
