@@ -8,6 +8,7 @@ var pdf = require('html-pdf');
 var pkg = require('./package.json');
 var verifier = require('./lib/verifier');
 var extraManager = require('./lib/extraItemsManager');
+var utils = require('./lib/utils');
 
 var program = require('commander');
 
@@ -131,6 +132,37 @@ program
 				    	});
 					}
 			    });
+			}
+		});
+    });
+
+program
+  .command('exportToPlainText <path_json> [output_location]')
+  .description('Export a text file resume from the json resume provided to the given location')
+  .action(function(path_json, output_location) {
+		fs.readFile(__dirname + '/' + path_json, 'utf-8', function (err, data) {
+			if (err) {
+				console.log(err);
+				process.exit(1);
+			}
+	    	var resumeJson = JSON.parse(data);
+	    	var v = verifier.run(resumeJson);
+
+		    if (v) {
+		    	var outputLocation = '/resume.txt';
+
+    			if (output_location) {
+    				outputLocation = '/' + output_location;
+    			}
+
+		    	outputLocation = process.cwd() + outputLocation;
+		    	var textFileContent = utils.generatePlainTextFromJson(resumeJson);
+		    	fs.writeFile(outputLocation, textFileContent, function(err) {
+		    		if (err) {
+		    			console.log(err);
+						process.exit(1);
+		    		}
+		    	});
 			}
 		});
     });
