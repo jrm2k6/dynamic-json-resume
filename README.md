@@ -165,6 +165,11 @@ And as a plain text file (as it is sometimes the only solution for some job post
 2. Run ```./cli.js exportToPlainText <json_path> [output_location]```
 
 
+## Generate your dynamic resume from your [json-resume](https://jsonresume.org/)
+
+1. Go into the module folder
+2. Run ```./cli.js generateFromJsonResume <json_path> [output_location]```
+
 ## Example
 ##### Complete example to integrate this into your node app (assuming you use node-express and mustache-express):
 

@@ -9,6 +9,7 @@ var pkg = require('./package.json');
 var verifier = require('./lib/verifier');
 var extraManager = require('./lib/extraItemsManager');
 var utils = require('./lib/utils');
+var converter = require('./lib/converterJsonResumeFormat');
 
 var program = require('commander');
 
@@ -166,5 +167,26 @@ program
 			}
 		});
     });
+
+program
+	.command('generateFromJsonResume <path_json> [output_location]')
+	.description('Generate a json from a json-resume file')
+	.action(function(path_json, output_location) {
+		fs.readFile(__dirname + '/' + path_json, 'utf-8', function(err, data) {
+			if (err) {
+				console.log(err);
+				process.exit(1);
+			}
+
+			var asJsonResume = JSON.parse(data);
+			var generatedJson = converter.parseJsonResumeFormat(asJsonResume);
+
+			if (output_location) {
+				converter.writeGeneratedJsonToFile(__dirname + '/' + output_location, generatedJson);
+			} else {
+				converter.writeGeneratedJsonToFile('converted.json', generatedJson);
+			}
+		});
+	});
 
 program.parse(process.argv);

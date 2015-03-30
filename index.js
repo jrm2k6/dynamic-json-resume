@@ -1,11 +1,13 @@
-var verifier = require('./lib/verifier');
-var extraManager = require('./lib/extraItemsManager');
+var Verifier = require('./lib/verifier');
+var ExtraManager = require('./lib/extraItemsManager');
+
+var Converter = require('./lib/converterJsonResumeFormat');
 
 function getResumeWithExtras(resumeJsonFile) {
 	var resumeJson = JSON.parse(resumeJsonFile);
-	var v = verifier.run(resumeJson);
-	var em = extraManager.extractExtras(resumeJson);
-	var extraContent = extraManager.generateExtraItemsTemplateCode(em);
+	var v = Verifier.run(resumeJson);
+	var em = ExtraManager.extractExtras(resumeJson);
+	var extraContent = ExtraManager.generateExtraItemsTemplateCode(em);
 
 	if (v) {
 		return {'resume': resumeJson.resume, 'extraContent': extraContent};

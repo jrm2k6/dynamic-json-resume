@@ -1,6 +1,6 @@
 {
   "name": "json-resume-dynamic",
-  "version": "0.0.13",
+  "version": "0.1.14",
   "description": "A tool to generate a web page containing your resume",
   "main": "index.js",
   "dependencies": {
