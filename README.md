@@ -1,6 +1,9 @@
 dynamic-json-resume
 ===================
 [![Build Status](https://travis-ci.org/jrm2k6/dynamic-json-resume.svg?branch=master)](https://travis-ci.org/jrm2k6/dynamic-json-resume)
+[![Latest Version](https://img.shields.io/npm/v/json-resume-dynamic.svg?style=flat-square)](https://www.npmjs.com/package/json-resume-dynamic)
+[![Total Downloads](https://img.shields.io/npm/dm/json-resume-dynamic.svg?style=flat-square)](https://www.npmjs.com/package/json-resume-dynamic)
+
 
 Create your resume easily using json, and add some dynamism to it, or export it as pdf.
 
