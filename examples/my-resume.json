@@ -63,6 +63,24 @@
 		"work": [
 			{
 				"item-work": {
+					"start-date": "Jan. 2015",
+					"end-date": "Current",
+					"position": "Software engineer",
+					"company": {
+						"name": "Curology",
+						"city": "San Diego",
+						"country": "USA"
+					},
+					"achievements": "Full-stack engineer, second engineer to join. Working on front-end and backend development to drive acquisition and retention of users",
+					"technologies": [
+						"Javascript",
+						"React.js",
+						"Ember.js",
+						"Laravel",
+						"React-Native"
+					]
+				}
+				"item-work": {
 					"start-date": "May. 2012",
 					"end-date": "Sep. 2014",
 					"position": "Software engineer",
