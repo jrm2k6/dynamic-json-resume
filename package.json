@@ -6,7 +6,7 @@
   "dependencies": {
     "chai": "^1.10.0",
     "commander": "^2.5.1",
-    "html-pdf": "^0.3.0",
+    "html-pdf": "^2.1.0",
     "mocha": "^2.1.0",
     "mustache": "^0.8.2"
   },
