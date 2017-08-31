@@ -28,7 +28,7 @@
 					}
 				}
 			},
-			{	
+			{
 				"item-education": {
 					"start-date": "Sep, 2009",
 					"end-date": "Oct, 2012",
@@ -46,7 +46,7 @@
 					"id": "item-education-polytech"
 				}
 			},
-			{	
+			{
 				"item-education": {
 					"start-date": "Sep, 2006",
 					"end-date": "May, 2009",
@@ -63,15 +63,35 @@
 		"work": [
 			{
 				"item-work": {
-					"start-date": "Jan. 2015",
+					"start-date": "Oct. 2016",
 					"end-date": "Current",
+					"position": "Software engineer",
+					"company": {
+						"name": "Ebates",
+						"city": "San Diego",
+						"country": "USA"
+					},
+					"achievements": "Member of the universal shopping cart team. I add features and help maintain several of our microservices in PHP/Laravel. Some of my other responsibilities include APIs integration (external merchants), and continuous integration pipeline for one-click deployment in our different QA environments, using Jenkins and Docker.",
+					"technologies": [
+						"Javascript",
+						"Angular.js",
+						"PHP",
+						"Laravel",
+						"Java"
+					]
+				}
+			},
+			{
+				"item-work": {
+					"start-date": "Jan. 2015",
+					"end-date": "Oct. 2016",
 					"position": "Software engineer",
 					"company": {
 						"name": "Curology",
 						"city": "San Diego",
 						"country": "USA"
 					},
-					"achievements": "Full-stack engineer, second engineer to join. Working on front-end and backend development to drive acquisition and retention of users",
+					"achievements": "Full-stack engineer, first engineer to join. Working on front-end and backend development to drive acquisition and retention of users. During my time there, I reimplemented a complex signup flow using Ember.js, introduced the company to React.js and Redux, and setup the initial Jenkins pipeline for our continous integration. I also worked a lot on improving our test coverage, through unit tests but also integration tests using Cucumber. Some of the React projects I worked on were a support center for our users, and an inventory management solution for our fulfillment team (Web app and React Native mobile app acting as a bottle scanner).",
 					"technologies": [
 						"Javascript",
 						"React.js",
@@ -80,6 +100,8 @@
 						"React-Native"
 					]
 				}
+			},
+			{
 				"item-work": {
 					"start-date": "May. 2012",
 					"end-date": "Sep. 2014",
@@ -105,96 +127,37 @@
 						"extraContent": "I learned so much during my time there. From testing to continuous deployment. <br /> Some technologies and tools that I used: <ul><li>Jenkins</li><li>Pig/Hadoop</li><li>Cucumber</li><li>Gradle</li></ul>"
 					}
 				}
-			},
-			{
-				"item-work": {
-					"start-date": "May, 2011",
-					"end-date": "Sep, 2011",
-					"position": "Intern Android Developer",
-					"company": {
-						"name": "UC Santa Cruz",
-						"city": "Santa Cruz",
-						"country": "USA"
-					},
-					"achievements": "I was in charge of implementing two prototypes in Android for two different projects. The first project was targeting people suffering from Aphasia. The Android application created was displaying images, with multiple choices for their meaning, or recording sentences repeated by the user. A web interface has also been implemented to provide an easy way for a therapist to follow the evolution of a patient. The second project was an electronic calendar for tables for people with Alzeihmer. This was an easy way to study their habits by recording their interaction with the application (handwriting, and taking pictures). I also took part in the redaction of papers submitted for conferences.",
-					"technologies": [
-						"Android/Java",
-						"PHP"
-					],
-					"id": "item-work-ucsc",
-					"extra": {
-						"type": "text",
-						"extraContent": "You can find the submitted paper here and the implementation for the Electronic Calendar in the <a href=\"http://github.com/jrm2k6/ElectronicCalendar\">Github repo</a>."
-					}
-				}
-			},
-			{
-				"item-work": {
-					"start-date": "Jun, 2010",
-					"end-date": "Sep, 2010",
-					"position": "Intern Developer",
-					"company": {
-						"name": "Jurisoft",
-						"city": "Nantes",
-						"country": "France"
-					},
-					"achievements": "Using Delphi, I implemented a system to automatically update the desktop version of the main software of the company, as a SOAP web service. The second part of my internship was to redesign and add features to the Downloads page of the company website.",
-					"technologies": [
-						"Delphi",
-						"PHP",
-						"Javascript"
-					]
-				}
 			}
 		],
 		"projects": [
 			{
 				"item-projects": {
-					"title": "Developer at JumyApps",
-					"description":"We mainly design and develop applications on our free time. So far, we have several board games, and a Twitter client focusing on ergonomy, making your usage of Twitter easier by providing nice to use features. Entirely conceived by us, we are also in charge of promoting them through various channels.",
+					"title": "Developer for iheartreading.co",
+					"description": "I have been working on I Heart Reading for a bit more than a year now. It is a platform helping teachers and students to keep track of their readings. It also gives the ability for teachers to get a clear picture of the progress made by their students, through a simple interface. Students can mark books as read and write reviews that their teachers can approve. I have one school in San Diego using it for the second year now. I started it from scratch as a way to improve my skills in Laravel and React. Some of the upcoming features would be books recommendations and adding some gamificiation to make reading logs more fun to use.",
 					"technologies": [
-						"Android/Java"
-					],
-					"id": "id-jumyapps",
-					"extra": {
-						"type": "images",
-						"extraContent": ["http://i.imgur.com/zbYcTsL.png", "http://i.imgur.com/1zi7bKi.png", "http://i.imgur.com/LNi89NW.png", "http://i.imgur.com/P4UGX5a.png"]
-					} 
+						"React",
+						"Redux",
+						"Laravel"
+					]
 				}
 			},
 			{
 				"item-projects": {
-					"title": "Creation of a blog engine",
-					"description":"I implemented my blog engine and personal website and decided mid-way that it would be nice to extract a smal CMS for developers. It provides an admin interface and different ways of backing your data like Dropbox or Google Drive, uses Markdown posts and it is aiming to make your life easier if you decide to have a personal blog. It is still in development but soon to be released.",
+					"title": "Maintainer of several open-source projects",
+					"description":"On my free time, I work on various open-source projects of my own. Those mostly includes small packages, easy to integrate. For example, this resume is generated through a npm package of my own called json-resume-dynamic. I have also a markdown editor with preview implemented in React.js that is currently used in production at Curology. I am also maintaining Reddit and Cloudinary API wrappers for Laravel, available as composer packages. ANother project is a small npm package to help you generate a calendar showing all your Bitbucket and Github contributions as a React component, easy to display on your website.",
 					"technologies": [
-						"Flask/Python",
-						"Javascript",
-						"Various APIs"
-					],
-					"id": "id-blog",
-					"extra": {
-						"type": "images",
-						"extraContent": ["http://i.imgur.com/zOB5aum.png", "http://i.imgur.com/CCs4UlO.png"]
-					} 
-				}
-			},
-			{	
-				"item-projects": {
-					"title": "Android code generator",
-					"description":"This is a project still in really early development. I plan to create a small DSL to make it easy to generate Android code for your implementation. This project is born through my passion for Android development and my growing interest for functional programing and Haskell specifically.",
-					"technologies": [
-						"Haskell"
+						"React",
+						"Laravel"
 					]
 				}
 			}
 		],
 		"skills": [
-			"Actionscript",
 			"Javascript",
-			"Haxe",
-			"Android/Java",
-			"Python/Flask/Django",
-			"Typescript"
+			"React.js/Redux",
+			"PHP",
+			"Laravel",
+			"Android/Java"
 		],
 		"languages": [
 			{
@@ -211,6 +174,12 @@
 			}
 		],
 		"hobbies": [
+			{
+				"item-hobbies": {
+					"name": "Functional programming",
+					"additional-info": "I have a growing interest for functional programming - Haskell/Elm"
+				}
+			},
 			{
 				"item-hobbies": {
 					"name": "Criminology",
